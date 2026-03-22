@@ -1,0 +1,62 @@
+import { Routes, Route } from "react-router-dom"
+
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Test from "./pages/test";
+
+import Hero from "./components/Hero"
+import AboutSection from "./components/AboutSection"
+import LeadersSection from "./components/LeadersSection"
+import MembersSection from "./components/MembersSection"
+import OnlineServices from "./components/OnlineServices"
+import GovSection from "./components/GovSection"
+import DynamicPage from "./pages/DynamicPage"
+import ScrollToTop from "./components/ScrollToTop";
+import Sitemap from "./pages/Sitemap";
+
+function Home() {
+  return (
+    <>
+      <Hero />
+
+      <div className="about-leaders-section">
+        <AboutSection />
+        <LeadersSection />
+      </div>
+
+      <MembersSection />
+      <OnlineServices />
+      <GovSection />
+    </>
+  )
+}
+
+function App() {
+
+  return (
+    <>
+      <Header />
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/:slug" element={<DynamicPage />} />
+        <Route path="/:parent" element={<DynamicPage />} />
+        <Route path="/:parent/:slug" element={<DynamicPage />} />
+        <Route path="/:parent/:child/:slug" element={<DynamicPage />} />
+
+        {/* ✅ Test Page Route */}
+        <Route path="/निर्देशिका" element={<Test />} />
+
+        <Route path="/sitemap" element={<Sitemap />} />
+
+      </Routes>
+
+      <Footer />
+
+      <ScrollToTop/>
+    </>
+  )
+}
+
+export default App

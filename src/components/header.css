@@ -1,0 +1,228 @@
+/* Government Top Bar */
+
+.gov-bar{
+background:#F7F9FC;
+padding:10px 0;
+font-size:14px;
+border-bottom: 1px solid #E5E7EB;
+}
+.gov-icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.gov-text a{
+color:#333;
+font-weight:500;
+text-decoration: none;
+}
+
+.gov-icons i{
+font-size:18px;
+cursor:pointer;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #B0B7C3;
+  margin: 0 10px;
+}
+
+.top-header{
+background:#F7F9FC;
+padding:15px 0;
+}
+
+.emblem{
+height:55px;
+}
+
+.gov-logo{
+height:55px;
+}
+
+.marathi-title{
+font-size: clamp(14px, 2vw, 18px);
+color:#555;
+}
+
+.site-title{
+font-weight:700;
+font-size: clamp(18px, 2vw, 32px);
+margin:0;
+}
+
+.main-nav{
+background:#e67e22;
+}
+.menu-all
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-icon .bi-list::before {
+    content: "\f479";
+    color: #fff;
+    font-size: 40px;
+}
+.main-nav .nav-link{
+color:white;
+font-weight:500;
+padding:15px 18px;
+}
+
+.main-nav .nav-link:hover{
+background:#ffffff;
+color:#000000;
+}
+.main-nav .nav-link:hover{
+background:#ffffff;
+color:#000000;
+}
+a.sitetitle{
+  text-decoration:none;
+  color:#000;
+}
+.main-nav .navbar{
+  padding: 0px;
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    background-color: #e67e22;
+    border: unset;
+    border-radius: 0px;
+    width: 220px;
+    padding: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover
+{
+  color: #000000 !important;
+}
+
+/* Make submenus fly out to the right on hover */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-right: 0;
+
+}
+/* Base dropdown hidden */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+}
+
+/* Show top-level dropdown on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Submenu (nested dropdown) */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Show nested submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.navbar-collapse .nav-link{
+  text-align: left;
+}
+.flash-news{
+background:#FBBF24;
+padding:6px 0;
+}
+
+.flash-label{
+background:#DC2626;
+color:white;
+padding:3px 10px;
+margin-right:10px;
+font-size:13px;
+width: 95px;
+text-align: center;
+}
+
+.scrolling-wrapper{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+.scrolling-text{
+  display:inline-block;
+  white-space:nowrap;
+  padding-left:100%;
+  animation:scrollText 15s linear infinite;
+}
+
+/* Show dropdown on hover */
+.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Submenu (right side) */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 768px)
+{
+.top-h{
+  flex-direction: column;
+}
+.top-h .gov-text{
+  padding-bottom: 15px;
+}
+.gov-logo {
+    height: 40px;
+}
+button.navbar-toggler{
+    font-size: 20px;
+    padding: 6px;
+    background-color: #fff;
+}
+.hero-buttons .btn {
+    padding: 10px 10px;
+    font-size: 14px;
+}
+}
+@keyframes scrollText{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}

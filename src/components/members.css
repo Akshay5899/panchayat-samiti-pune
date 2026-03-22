@@ -1,0 +1,60 @@
+.members-section {
+  background-image: url('/images/bg-members.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.members-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.member-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 60px;
+  opacity: 0.6;
+}
+
+.member-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.member-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .members-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .members-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,42 @@
+.sitemap-page {
+  background-color: #F7F9FC;
+  padding-bottom: clamp(20px, 5vw, 40px);
+}
+
+.sitemap-page ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style: disc;
+}
+
+.sitemap-page li {
+  margin: 0.3rem 0;
+  
+}
+
+.sitemap-page li ul {
+  margin-left: 1rem; /* indent nested items */
+  list-style: circle;
+}
+
+/* Normal links */
+.sitemap-page a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sitemap-page a:hover {
+  text-decoration: underline;
+}
+
+/* Top-level menu items bold */
+.sitemap-page .top-level-link {
+  font-weight: 700 !important;
+  color: #000; /* black */
+}
+
+/* Optional: slightly smaller font for nested items */
+.sitemap-page li ul li a {
+  font-size: 0.95rem;
+  color: #333;
+}
