@@ -199,6 +199,9 @@ text-align: center;
 
 @media (max-width: 768px)
 {
+.navbar-nav .dropdown-menu {
+    box-shadow: none;
+}
 .top-h{
   flex-direction: column;
 }
