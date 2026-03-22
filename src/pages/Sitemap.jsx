@@ -30,7 +30,7 @@ function Sitemap({ title }) {
       <BannerAll />
       <div className="sitemap-page">
         <div className="container">
-          <h1>Sitemap</h1>
+          <h1>साइटमॅप</h1>
           {renderSitemap(menuItems, true)}
         </div>
       </div>

@@ -48,7 +48,7 @@ function App() {
         {/* ✅ Test Page Route */}
         <Route path="/निर्देशिका" element={<Test />} />
 
-        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/साइटमॅप" element={<Sitemap />} />
 
       </Routes>
 

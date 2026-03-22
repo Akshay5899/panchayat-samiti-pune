@@ -52,9 +52,9 @@ const renderMenu = (items, isSubmenu = false) =>
           <div className="gov-icons">
             <i className="bi bi-search"></i>
             <span className="divider"></span>
-            <i className="bi bi-diagram-3"></i>
+            <a href="/साइटमॅप" target="blank"><i className="bi bi-diagram-3"></i></a>
             <span className="divider"></span>
-            <i className="bi bi-gear"></i>
+            <a href="#" target="blank"><i className="bi bi-gear"></i></a>
             <span className="divider"></span>
             <Translator />
             <div className="header-right">
