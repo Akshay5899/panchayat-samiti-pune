@@ -11,6 +11,7 @@ import MembersSection from "./components/MembersSection"
 import OnlineServices from "./components/OnlineServices"
 import GovSection from "./components/GovSection"
 import DynamicPage from "./pages/DynamicPage"
+import Search from "./pages/Search";
 import ScrollToTop from "./components/ScrollToTop";
 import Sitemap from "./pages/Sitemap";
 
@@ -47,6 +48,8 @@ function App() {
 
         {/* ✅ Test Page Route */}
         <Route path="/निर्देशिका" element={<Test />} />
+
+        <Route path="/search" element={<Search />} />
 
         <Route path="/साइटमॅप" element={<Sitemap />} />
 

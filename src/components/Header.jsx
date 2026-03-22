@@ -1,44 +1,49 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageSwitch from "./LanguageSwitch";
 import Translator from "./Translator";
 import SideMenu from "./SideMenu";
 import { menuItems } from "../data/menu"; // dynamic menu
+import SearchPopup from "./SearchPopup"; // search popup component
 import "./header.css";
-
+import { useState } from "react";
 
 function Header() {
-// Inside renderMenu function
+  const [showSearch, setShowSearch] = useState(false);
 
+  const handleOpenSearch = () => setShowSearch(true);
+  const handleCloseSearch = () => setShowSearch(false);
 
-const renderMenu = (items, isSubmenu = false) =>
-  items.map((item, idx) => {
-    const hasSubmenu = item.submenu && item.submenu.length > 0;
+  // Recursive function to render menu and submenus
+  const renderMenu = (items, isSubmenu = false) =>
+    items.map((item, idx) => {
+      const hasSubmenu = item.submenu && item.submenu.length > 0;
 
-    return (
-      <li
-        key={idx}
-        className={`nav-item dropdown ${isSubmenu ? "dropdown-submenu" : ""}`}
-      >
-        {/* Parent link */}
-        <Link
-          to={item.path || "#"}
-          className="nav-link d-flex justify-content-between align-items-center"
+      return (
+        <li
+          key={idx}
+          className={`nav-item dropdown ${isSubmenu ? "dropdown-submenu" : ""}`}
         >
-          {item.name}
-          {hasSubmenu && <i
-      className={`bi ${isSubmenu ? "bi-caret-right-fill" : "bi-caret-down-fill"} ms-2`}
-    ></i>}
-        </Link>
+          {/* Parent link */}
+          <Link
+            to={item.path || "#"}
+            className="nav-link d-flex justify-content-between align-items-center"
+          >
+            {item.name}
+            {hasSubmenu && (
+              <i
+                className={`bi ${
+                  isSubmenu ? "bi-caret-right-fill" : "bi-caret-down-fill"
+                } ms-2`}
+              ></i>
+            )}
+          </Link>
 
-        {/* Submenu */}
-        {hasSubmenu && (
-          <ul className="dropdown-menu">
-            {renderMenu(item.submenu, true)}
-          </ul>
-        )}
-      </li>
-    );
-  });
+          {/* Submenu */}
+          {hasSubmenu && <ul className="dropdown-menu">{renderMenu(item.submenu, true)}</ul>}
+        </li>
+      );
+    });
+
   return (
     <header>
       {/* Top Bar */}
@@ -50,11 +55,20 @@ const renderMenu = (items, isSubmenu = false) =>
             </a>
           </div>
           <div className="gov-icons">
-            <i className="bi bi-search"></i>
+            {/* Search Icon */}
+            <i
+              className="bi bi-search"
+              style={{ cursor: "pointer" }}
+              onClick={handleOpenSearch}
+            ></i>
             <span className="divider"></span>
-            <a href="/साइटमॅप" target="blank"><i className="bi bi-diagram-3"></i></a>
+            <a href="/साइटमॅप" target="_blank">
+              <i className="bi bi-diagram-3"></i>
+            </a>
             <span className="divider"></span>
-            <a href="#" target="blank"><i className="bi bi-gear"></i></a>
+            <a href="#" target="_blank">
+              <i className="bi bi-gear"></i>
+            </a>
             <span className="divider"></span>
             <Translator />
             <div className="header-right">
@@ -69,7 +83,7 @@ const renderMenu = (items, isSubmenu = false) =>
         <div className="container d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center gap-3">
             <Link to="/">
-              <img src="/images/emblem.png" className="emblem" alt="" />
+              <img src="/images/emblem.png" className="emblem" alt="Emblem" />
             </Link>
             <div className="g-3">
               <Link to="/" className="sitetitle">
@@ -81,8 +95,8 @@ const renderMenu = (items, isSubmenu = false) =>
             </div>
           </div>
           <div className="d-flex gap-3">
-            <img src="/images/logo1.png" className="gov-logo" alt="" />
-            <img src="/images/logo2.png" className="gov-logo" alt="" />
+            <img src="/images/logo1.png" className="gov-logo" alt="Gov Logo" />
+            <img src="/images/logo2.png" className="gov-logo" alt="Gov Logo" />
           </div>
         </div>
       </div>
@@ -106,6 +120,9 @@ const renderMenu = (items, isSubmenu = false) =>
           <SideMenu />
         </div>
       </div>
+
+      {/* Search Popup */}
+      {showSearch && <SearchPopup onClose={handleCloseSearch} />}
     </header>
   );
 }
