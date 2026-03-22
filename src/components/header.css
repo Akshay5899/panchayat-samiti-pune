@@ -196,12 +196,23 @@ text-align: center;
 .dropdown-submenu:hover .dropdown-menu {
   display: block;
 }
-
-@media (max-width: 768px)
+@media (max-width: 1200px)
 {
+button.navbar-toggler{
+    font-size: 20px;
+    padding: 6px;
+    background-color: #fff;
+}
+.main-nav{
+  padding: 10px 0px;
+}
 .navbar-nav .dropdown-menu {
     box-shadow: none;
 }
+}
+@media (max-width: 768px)
+{
+
 .top-h{
   flex-direction: column;
 }
@@ -211,11 +222,7 @@ text-align: center;
 .gov-logo {
     height: 40px;
 }
-button.navbar-toggler{
-    font-size: 20px;
-    padding: 6px;
-    background-color: #fff;
-}
+
 .hero-buttons .btn {
     padding: 10px 10px;
     font-size: 14px;

@@ -90,7 +90,7 @@ const renderMenu = (items, isSubmenu = false) =>
       {/* Navbar */}
       <div className="main-nav">
         <div className="container menu-all">
-          <nav className="navbar navbar-expand-lg">
+          <nav className="navbar navbar-expand-xl">
             <button
               className="navbar-toggler"
               type="button"
