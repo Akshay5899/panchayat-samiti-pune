@@ -3,6 +3,7 @@ const pagesData = {
   "पंचायत-समिती-विषयी": {
     parent: "विभागाविषयी",
     title: "पंचायत समिती विषयी",
+    label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
 
     content: [
@@ -55,6 +56,7 @@ const pagesData = {
   "दृष्टी-आणि-ध्येय": {
     parent: "विभागाविषयी",
     title: "दृष्टी आणि ध्येय",
+    label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
 
     sections: [
@@ -72,6 +74,7 @@ const pagesData = {
   "उद्दिष्टे-आणि-कार्ये": {
     parent: "विभागाविषयी",
     title: "उद्दिष्टे आणि कार्ये",
+    label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
 
     sections: [
@@ -97,6 +100,7 @@ const pagesData = {
     "प्रशासकीय-रचना": {
     parent: "विभागाविषयी",
     title: "प्रशासकीय रचना",
+    label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
 
     sections: [

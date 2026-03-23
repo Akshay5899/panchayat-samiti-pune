@@ -1,7 +1,7 @@
 import Breadcrumb from "./Breadcrumb"
 import "../styles/subpage.css"
 
-export default function SubPageLayout({ title, date, content, sections }) {
+export default function SubPageLayout({ title, label, date, content, sections }) {
 
   return (
 
@@ -20,7 +20,11 @@ export default function SubPageLayout({ title, date, content, sections }) {
         <Breadcrumb />
         <h1>{title}</h1>
 
-        <p className="date"><b>प्रकाशित तारीख :</b> {date}</p>
+        {/* <p className="date"><b>प्रकाशित तारीख :</b> {date}</p> */}
+
+        <p className="date">
+          <b>{label}</b> {date}
+        </p>
 
         {/* Paragraph Content */}
 

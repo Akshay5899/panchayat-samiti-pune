@@ -17,6 +17,8 @@ function DynamicPage() {
   return (
     <SubPageLayout
       title={page.title}
+      date={page.date}
+      label={page.label}
       content={page.content}
       sections={page.sections}
     />
