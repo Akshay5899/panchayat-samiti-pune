@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/rtidocuments.css"
 import Breadcrumb from "../components/Breadcrumb";
+import BannerAll from "../components/BannerAll";
 
 const documents = [
   {
@@ -33,9 +34,9 @@ const documents = [
 
 const RtiDocuments = () => {
   return (
-    <div className="all-subpage">
-    <div className="container">
-    <Breadcrumb />
+    <div>
+    <BannerAll />
+    <div className="subpage-content container">
     <div className="table-container rti-table">
       
       <table className="data-table">

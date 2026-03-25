@@ -70,3 +70,6 @@ button,
   text-decoration:none;
   color:#e67e22;
 }
+.all-subpage{
+    padding:clamp(20px, 5vw, 40px) 0;
+}
