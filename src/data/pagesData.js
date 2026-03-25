@@ -1,12 +1,12 @@
 const pagesData = {
 
-  "about-department": {
+  "विभागाविषयी": {
     parent: "",
-    title: "विभागविषयी"
+    title: "विभागाविषयी"
   },
 
   "पंचायत-समिती-विषयी": {
-    parent: "about-department",
+    parent: "विभागाविषयी",
     title: "पंचायत समिती विषयी",
     label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
@@ -59,7 +59,7 @@ const pagesData = {
   },
 
   "दृष्टी-आणि-ध्येय": {
-    parent: "about-department",
+    parent: "विभागाविषयी",
     title: "दृष्टी आणि ध्येय",
     label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
@@ -77,7 +77,7 @@ const pagesData = {
   },
 
   "उद्दिष्टे-आणि-कार्ये": {
-    parent: "about-department",
+    parent: "विभागाविषयी",
     title: "उद्दिष्टे आणि कार्ये",
     label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
@@ -103,7 +103,7 @@ const pagesData = {
   },
 
     "प्रशासकीय-रचना": {
-    parent: "about-department",
+    parent: "विभागाविषयी",
     title: "प्रशासकीय रचना",
     label: "प्रकाशित तारीख :",
     date: "November 14, 2019",
@@ -115,13 +115,13 @@ const pagesData = {
     ]
     },
 
-    "departments":{
+    "विभाग":{
         parent: "",
         title: "विभाग",
     },
 
   "सामान्य-प्रशासन-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "सामान्य प्रशासन विभाग",
 
     content: [
@@ -186,7 +186,7 @@ const pagesData = {
   },
 
   "ग्रामपंचायत-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "ग्रामपंचायत विभाग",
 
     content: [
@@ -277,7 +277,7 @@ const pagesData = {
     ]
   },
   "शिक्षण-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "शिक्षण विभाग",
   },
 
@@ -336,7 +336,7 @@ const pagesData = {
   },
 
   "जिल्हा-ग्रामीण-विकास-यंत्रणा": {
-    parent: "departments",
+    parent: "विभाग",
     title: "जिल्हा ग्रामीण विकास यंत्रणा",
 
     content: [
@@ -399,7 +399,7 @@ const pagesData = {
   },
 
   "वित्त-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "वित्त विभाग",
 
     sections: [
@@ -467,7 +467,7 @@ const pagesData = {
     ]
   },
   "समाज-कल्याण-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "समाज कल्याण विभाग",
 
     content: [
@@ -563,7 +563,7 @@ const pagesData = {
   },
 
   "पशुसंवर्धन-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "पशुसंवर्धन विभाग",
 
     content: [
@@ -634,7 +634,7 @@ const pagesData = {
     ]
   },
   "कृषी-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "कृषी विभाग",
 
     content: [
@@ -838,7 +838,7 @@ const pagesData = {
   },
 
   "ग्रामीण-पाणी-पुरवठा-बांधकाम-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "ग्रामीण पाणी पुरवठा बांधकाम विभाग",
 
     content: [
@@ -1432,7 +1432,7 @@ const pagesData = {
     ]
   },
   "आरोग्य-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "आरोग्य विभाग",
 
     content: [
@@ -1671,7 +1671,7 @@ const pagesData = {
   },
 
   "जिल्हा-पाणी-व-स्वच्छता-मिशन": {
-    parent: "departments",
+    parent: "विभाग",
     title: "जिल्हा पाणी व स्वच्छता मिशन",
 
     sections: [
@@ -1708,7 +1708,7 @@ const pagesData = {
   },
 
   "जिल्हा-परिषद-विभाग": {
-    parent: "departments",
+    parent: "विभाग",
     title: "जिल्हा परिषद ( ल ‌.पा ) विभाग",
 
     content: [
