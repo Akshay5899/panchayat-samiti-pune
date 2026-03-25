@@ -14,7 +14,7 @@ import DynamicPage from "./pages/DynamicPage"
 import Search from "./pages/Search";
 import ScrollToTop from "./components/ScrollToTop";
 import Sitemap from "./pages/Sitemap";
-import RtiDocuments from "./pages/rtiDocuments";
+import RtiDocuments from "./pages/RtiDocuments";
 
 function Home() {
   return (

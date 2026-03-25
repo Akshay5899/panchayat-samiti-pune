@@ -1,6 +1,5 @@
-import React from "react";
+
 import "../styles/rtidocuments.css"
-import Breadcrumb from "../components/Breadcrumb";
 import BannerAll from "../components/BannerAll";
 
 const documents = [
