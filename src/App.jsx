@@ -14,6 +14,7 @@ import DynamicPage from "./pages/DynamicPage"
 import Search from "./pages/Search";
 import ScrollToTop from "./components/ScrollToTop";
 import Sitemap from "./pages/Sitemap";
+import RtiDocuments from "./pages/rtiDocuments";
 
 function Home() {
   return (
@@ -50,6 +51,8 @@ function App() {
         <Route path="/निर्देशिका" element={<Test />} />
 
         <Route path="/search" element={<Search />} />
+
+        <Route path="/माहिती-अधिकार/माहितीचा-अधिकार-कागदपत्रे" element={<RtiDocuments />} />
 
         <Route path="/साइटमॅप" element={<Sitemap />} />
 
