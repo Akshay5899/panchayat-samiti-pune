@@ -60,18 +60,18 @@ function Footer() {
               <h6>महत्वाच्या लिंक</h6>
 
               <ul>
-                <li>भारत सरकार</li>
-                <li>महाराष्ट्र शासन</li>
-                <li>ग्रामविकास व पंचायतराज विभाग</li>
-                <li>विभागीय कार्यालय, पुणे</li>
-                <li>जिल्हाधिकारी कार्यालय, पुण</li>
-                <li>इंटीग्रेटेड जिल्हा परिषद पुणे डॅशबोर् (ID)</li>
-                <li>इंटेलिजंट वर्क्स मॅनेजमेंट सिस्टम (IWMS)</li>
-                <li>सु.बे.अ आणि मजूर सहकारी संस्था कामवाटप सिस्टम</li>
-                <li>१५० दिवसांच्या सेवा कामगार कार्यक्रमाचे मूल्यांकन</li>
-                <li>राष्ट्रीय आयुष अभियानांतर्गत डाटा एन्ट्री ऑपरेटर पदाची पात्र व अपात्र यादी.</li>
-                <li>बांधकाम उपविभाग इंदापूर साठी वाहन भाड्याने पुरवठा करणेसाठी दरपत्रके मागवणेबाबत</li>
-                <li>बी पी एच यु अंतर्गत विविध तीन संवर्गाची अंतरीम गुणवत्ता यादी</li>
+                <li><a href="https://www.india.gov.in/" target="blank">भारत सरकार</a></li>
+                <li><a href="https://www.maharashtra.gov.in/" target="blank">महाराष्ट्र शासन</a></li>
+                <li><a href="https://rdd.maharashtra.gov.in/" target="blank">ग्रामविकास व पंचायतराज विभाग</a></li>
+                <li><a href="https://divcompune.maharashtra.gov.in/" target="blank">विभागीय कार्यालय, पुणे</a></li>
+                <li><a href="https://pune.gov.in/" target="blank">जिल्हाधिकारी कार्यालय, पुण</a></li>
+                <li><a href="https://dashboard.daxy.in/pages/login.php" target="blank">इंटीग्रेटेड जिल्हा परिषद पुणे डॅशबोर् (ID)</a></li>
+                <li><a href="https://www.punezpebilling.in/site/login" target="blank">इंटेलिजंट वर्क्स मॅनेजमेंट सिस्टम (IWMS)</a></li>
+                <li><a href="https://zppunekamwatap.in/" target="blank">सु.बे.अ आणि मजूर सहकारी संस्था कामवाटप सिस्टम</a></li>
+                <li><a href="https://drive.google.com/file/d/1vUHbFzoe8-RWmJuCtJYi7tcrHAS2GMid/view" target="blank">१५० दिवसांच्या सेवा कामगार कार्यक्रमाचे मूल्यांकन</a></li>
+                <li><a href="https://cdnbbsr.s3waas.gov.in/s3be1df9a5d08724971f64a511e24fc904/uploads/2025/12/202512082022874382.pdf" target="blank">राष्ट्रीय आयुष अभियानांतर्गत डाटा एन्ट्री ऑपरेटर पदाची पात्र व अपात्र यादी.</a></li>
+                <li><a href="https://cdnbbsr.s3waas.gov.in/s3be1df9a5d08724971f64a511e24fc904/uploads/2025/11/202511261482118605.pdf" target="blank">बांधकाम उपविभाग इंदापूर साठी वाहन भाड्याने पुरवठा करणेसाठी दरपत्रके मागवणेबाबत</a></li>
+                <li><a href="https://cdnbbsr.s3waas.gov.in/s3be1df9a5d08724971f64a511e24fc904/uploads/2025/11/202511201227498333.pdf" target="blank">बी पी एच यु अंतर्गत विविध तीन संवर्गाची अंतरीम गुणवत्ता यादी</a></li>
               </ul>
 
             </div>
@@ -83,13 +83,13 @@ function Footer() {
               <h6>हेल्पलाईन</h6>
 
               <ul>
-                <li>आपत्कालीन पोलीस: 100</li>
-                <li>आपत्कालीन हेल्पलाइन: 122</li>
-                <li>गुन्हेगारी थांबवणारा: 1090</li>
-                <li>महिला हेल्पलाइन: 1091</li>
-                <li>बाल हेल्पलाइन: 1098</li>
-                <li>नागरिकांचे कॉल सेंटर: 155300</li>
-                <li>सायबर गुन्हे: 1930</li>
+                <li>आपत्कालीन पोलीस: <b>100</b></li>
+                <li>आपत्कालीन हेल्पलाइन: <b>122</b></li>
+                <li>गुन्हेगारी थांबवणारा: <b>1090</b></li>
+                <li>महिला हेल्पलाइन: <b>1091</b></li>
+                <li>बाल हेल्पलाइन: <b>1098</b></li>
+                <li>नागरिकांचे कॉल सेंटर: <b>155300</b></li>
+                <li>सायबर गुन्हे: <b>1930</b></li>
               </ul>
 
             </div>

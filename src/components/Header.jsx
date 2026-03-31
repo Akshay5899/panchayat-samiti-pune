@@ -51,7 +51,7 @@ function Header() {
         <div className="container top-h g-3 d-flex justify-content-between align-items-center">
           <div className="gov-text">
             <a href="https://maharashtra.gov.in/" target="_blank">
-              महाराष्ट्र शासन | Government of Maharashtra
+              महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
             </a>
           </div>
           <div className="gov-icons">
@@ -95,8 +95,12 @@ function Header() {
             </div>
           </div>
           <div className="d-flex gap-3">
+            <a href="/" target="_blank" rel="noopener noreferrer">
             <img src="/images/logo1.png" className="gov-logo" alt="Gov Logo" />
+            </a>
+            <a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer">
             <img src="/images/logo2.png" className="gov-logo" alt="Gov Logo" />
+            </a>
           </div>
         </div>
       </div>
