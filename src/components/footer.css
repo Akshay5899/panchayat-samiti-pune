@@ -50,7 +50,11 @@ color: #fff;
 text-decoration: none;
 font-family:'Open Sans', sans-serif;
 }
-
+.footer-main p a{
+color: #fff;
+text-decoration: none;
+font-family:'Open Sans', sans-serif; 
+}
 .footer-logo img{
 height:60px;
 }

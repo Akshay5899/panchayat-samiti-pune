@@ -114,7 +114,7 @@ function Footer() {
 
             <p>
                 <i className="bi bi-envelope-fill me-2"></i>
-                ceozp.pune@maharashtra.gov.in
+                <a href="mailto:ceozp.pune@maharashtra.gov.in">ceozp.pune@maharashtra.gov.in</a>
             </p>
 
             <div>

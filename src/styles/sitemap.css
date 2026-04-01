@@ -23,6 +23,7 @@
 .sitemap-page a {
   text-decoration: none;
   color: #000;
+  font-family:'Open Sans', sans-serif;
 }
 
 .sitemap-page a:hover {
