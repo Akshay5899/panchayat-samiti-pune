@@ -1,6 +1,6 @@
 /* Default Body Font */
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   color:#000;
   overflow-x: hidden;
   background-color: #F7F9FC;
