@@ -11,12 +11,13 @@ box-shadow:0 5px 20px rgba(0,0,0,0.1);
 .about-title{
 font-weight:600;
 margin-bottom:20px;
+color: #000;
 }
 
 .about-text{
 font-size:14px;
 line-height:1.7;
-color:#444;
+color:#000;
 margin-bottom:15px;
 }
 

@@ -64,6 +64,7 @@ button,
     margin: 0px !important;
     padding-bottom: 15px !important;
   font-family:'Open Sans', sans-serif;
+  color: #000;
 }
 
 .breadcrumb a{

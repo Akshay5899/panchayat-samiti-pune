@@ -42,7 +42,7 @@
 }
 
 .hero-title {
-  font-size: clamp(30px, 2.5vw, 40px);
+  font-size: clamp(25px, 2.5vw, 40px);
   font-weight: 700;
 }
 
@@ -79,5 +79,8 @@
   .carousel-item,
   .info-card img {
     height: 300px;
+  }
+  .hero-title {
+  text-align: center;
   }
 }

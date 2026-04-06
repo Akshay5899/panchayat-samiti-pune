@@ -3,6 +3,11 @@
   padding-bottom: clamp(20px, 5vw, 40px);
 }
 
+.sitemap-page h1{
+    font-weight: 700;
+    font-size: clamp(22px, 3vw, 36px);
+    color: #000;
+}
 .sitemap-page ul {
   padding-left: 1rem;
   margin: 0;
@@ -39,5 +44,5 @@
 /* Optional: slightly smaller font for nested items */
 .sitemap-page li ul li a {
   font-size: 0.95rem;
-  color: #333;
+  color: #000;
 }
