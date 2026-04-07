@@ -234,6 +234,8 @@ button.navbar-toggler{
     font-size: 14px;
 }
 }
+
+
 @keyframes scrollText{
   0%{
     transform:translateX(0);
