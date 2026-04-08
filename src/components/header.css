@@ -214,6 +214,15 @@ button.navbar-toggler{
 }
 .navbar-nav .dropdown-menu {
     box-shadow: none;
+        display: none !important;
+    position: static !important;
+    width: 100%;
+}
+.mobile-open > .dropdown-menu {
+    display: block !important;
+  }
+.side-icon{
+  display: none;
 }
 }
 @media (max-width: 768px)

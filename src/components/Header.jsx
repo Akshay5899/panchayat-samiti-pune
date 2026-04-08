@@ -2,44 +2,86 @@ import { Link } from "react-router-dom";
 import LanguageSwitch from "./LanguageSwitch";
 import Translator from "./Translator";
 import SideMenu from "./SideMenu";
-import { menuItems } from "../data/menu"; // dynamic menu
-import SearchPopup from "./SearchPopup"; // search popup component
+import { menuItems } from "../data/menu";
+import SearchPopup from "./SearchPopup";
 import "./header.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Header() {
   const [showSearch, setShowSearch] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
+  const menuRef = useRef();
 
   const handleOpenSearch = () => setShowSearch(true);
   const handleCloseSearch = () => setShowSearch(false);
 
-  // Recursive function to render menu and submenus
-  const renderMenu = (items, isSubmenu = false) =>
+  // ✅ Navbar toggle
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle("show");
+  };
+
+  // ✅ Close navbar
+  const closeMenu = () => {
+    if (menuRef.current.classList.contains("show")) {
+      menuRef.current.classList.remove("show");
+    }
+  };
+
+  // ✅ Toggle submenu (icon click)
+  const handleToggleSubmenu = (e, key) => {
+    if (window.innerWidth < 1200) {
+      e.preventDefault();
+      e.stopPropagation();
+      setOpenMenu(openMenu === key ? null : key);
+    }
+  };
+
+  // ✅ Recursive Menu
+  const renderMenu = (items, parentKey = "") =>
     items.map((item, idx) => {
       const hasSubmenu = item.submenu && item.submenu.length > 0;
+      const key = parentKey + idx;
 
       return (
         <li
-          key={idx}
-          className={`nav-item dropdown ${isSubmenu ? "dropdown-submenu" : ""}`}
+          key={key}
+          className={`nav-item dropdown ${
+            parentKey ? "dropdown-submenu" : ""
+          } ${openMenu === key ? "mobile-open" : ""}`}
         >
-          {/* Parent link */}
-          <Link
-            to={item.path || "#"}
-            className="nav-link d-flex justify-content-between align-items-center"
-          >
-            {item.name}
+          <div className="d-flex justify-content-between align-items-center">
+
+            {/* TEXT CLICK → NAVIGATE */}
+            <Link
+              to={item.path || "#"}
+              className="nav-link flex-grow-1"
+              onClick={() => {
+                if (window.innerWidth < 1200) closeMenu();
+              }}
+            >
+              {item.name}
+            </Link>
+
+            {/* ICON CLICK → OPEN SUBMENU */}
             {hasSubmenu && (
               <i
                 className={`bi ${
-                  isSubmenu ? "bi-caret-right-fill" : "bi-caret-down-fill"
+                  parentKey
+                    ? "bi-caret-right-fill"
+                    : "bi-caret-down-fill"
                 } ms-2`}
+                onClick={(e) => handleToggleSubmenu(e, key)}
+                style={{ cursor: "pointer", color: "white" }}
               ></i>
             )}
-          </Link>
+          </div>
 
-          {/* Submenu */}
-          {hasSubmenu && <ul className="dropdown-menu">{renderMenu(item.submenu, true)}</ul>}
+          {/* SUBMENU */}
+          {hasSubmenu && (
+            <ul className="dropdown-menu">
+              {renderMenu(item.submenu, key + "-")}
+            </ul>
+          )}
         </li>
       );
     });
@@ -54,22 +96,28 @@ function Header() {
               महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
             </a>
           </div>
+
           <div className="gov-icons">
-            {/* Search Icon */}
             <i
               className="bi bi-search"
-              style={{ cursor: "pointer" }}
               onClick={handleOpenSearch}
+              style={{ cursor: "pointer" }}
             ></i>
+
             <span className="divider"></span>
+
             <a href="/साइटमॅप" target="_blank">
               <i className="bi bi-diagram-3"></i>
             </a>
+
             <span className="divider"></span>
+
             <a href="#" target="_blank">
               <i className="bi bi-gear"></i>
             </a>
+
             <span className="divider"></span>
+
             <Translator />
             <div className="header-right">
               <LanguageSwitch />
@@ -85,6 +133,7 @@ function Header() {
             <Link to="/">
               <img src="/images/emblem.png" className="emblem" alt="Emblem" />
             </Link>
+
             <div className="g-3">
               <Link to="/" className="sitetitle">
                 <h6 className="marathi-title">पंचायत समिती पुणे</h6>
@@ -94,12 +143,18 @@ function Header() {
               </Link>
             </div>
           </div>
+
           <div className="d-flex gap-3">
             <a href="/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/logo1.png" className="gov-logo" alt="Gov Logo" />
+              <img src="/images/logo1.png" className="gov-logo" alt="" />
             </a>
-            <a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/logo2.png" className="gov-logo" alt="Gov Logo" />
+
+            <a
+              href="https://www.digitalindia.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/logo2.png" className="gov-logo" alt="" />
             </a>
           </div>
         </div>
@@ -112,20 +167,27 @@ function Header() {
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menu"
+              onClick={toggleMenu}
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="menu">
-              <ul className="navbar-nav m-auto">{renderMenu(menuItems)}</ul>
+
+            <div
+              className="collapse navbar-collapse"
+              id="menu"
+              ref={menuRef}
+            >
+              <ul className="navbar-nav m-auto">
+                {renderMenu(menuItems)}
+              </ul>
             </div>
           </nav>
+
           <SideMenu />
         </div>
       </div>
 
-      {/* Search Popup */}
+      {/* Search */}
       {showSearch && <SearchPopup onClose={handleCloseSearch} />}
     </header>
   );
