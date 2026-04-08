@@ -62,8 +62,10 @@ margin:40px auto;
 line-height:1.8;
 }
 
-.scheme-list li{
-margin-bottom:10px;
+.scheme-list li {
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
 .scheme-list strong{
