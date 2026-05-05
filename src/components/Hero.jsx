@@ -36,7 +36,7 @@ function Hero() {
                 <div className="carousel-item active slide1">
                   <div className="hero-overlay">
                     <h1 className="hero-title">
-                      ओळख पुण्याची, शान महाराष्ट्राची !
+                      ओळख पुण्याची, शान  !
                     </h1>
                     <p className="hero-subtitle">
                       देश विदेशातील पाहुण्यांचे हार्दिक स्वागत
